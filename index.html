@@ -10,6 +10,7 @@
             background-color: #0d1b2a;
             color: #e0e1dd;
             padding: 20px;
+            margin: 0;
         }
         h1 {
             text-align: center;
@@ -17,19 +18,28 @@
             margin-bottom: 20px;
             font-size: 2em;
         }
+        .section-header {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #f0f0f0;
+            border-bottom: 2px solid #e0e1dd;
+            padding-bottom: 5px;
+        }
         table {
             width: 100%;
             border-spacing: 10px;
             background-color: #1b263b;
+            border-collapse: separate;
         }
         td {
             padding: 15px;
             background-color: #1d3557;
             color: #e0e1dd;
+            border-radius: 5px;
         }
         .media-container {
             position: relative;
-            padding-bottom: 56.25%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
             background: #000;
             border-radius: 5px;
             overflow: hidden;
@@ -51,6 +61,9 @@
 </head>
 <body>
     <h1>Media Showcase</h1>
+    
+    <!-- Videos Section -->
+    <div class="section-header">Videos</div>
     <table>
         <tr>
             <td>
@@ -64,21 +77,26 @@
             <td>
                 <div class="media-container">
                     <iframe src="https://www.youtube.com/embed/35KDnej1hlI?si=a0ghSrbjQe8P-70V" allowfullscreen></iframe>
-                </div>   
+                </div>
             </td>
         </tr>
+    </table>
+    
+    <!-- Audio Section -->
+    <div class="section-header">Audio</div>
+    <table>
         <tr>
             <td>
                 <audio controls>
                     <source src="Wanna Be Yours.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
-                </audio> 
+                </audio>
             </td>
             <td>
                 <audio controls>
                     <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
-                </audio> 
+                </audio>
             </td>
         </tr>
     </table>
